@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>发送结果</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="overlay"></div>
+  <main class="card small">
+    {% if success %}
+      <h2>✅ 邮件已成功发送至：</h2>
+      <p><strong>{{ to_email }}</strong></p>
+    {% else %}
+      <h2>❌ 发送失败</h2>
+      <p>{{ error }}</p>
+    {% endif %}
+    <a href="{{ url_for('index') }}" class="back-btn">返回主页</a>
+  </main>
+</body>
+</html>
