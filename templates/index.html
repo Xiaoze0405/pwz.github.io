@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>简约邮箱 - 发送邮件</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="overlay"></div>
+
+  <main class="card">
+    <h1>📧 发送邮件</h1>
+
+    <form action="{{ url_for('send') }}" method="post">
+      <label>收件人邮箱</label>
+      <input type="email" name="to_email" required placeholder="例如: someone@example.com">
+
+      <label>主题</label>
+      <input type="text" name="subject" required placeholder="请输入主题">
+
+      <label>内容</label>
+      <textarea name="body" rows="6" required placeholder="在此输入邮件内容..."></textarea>
+
+      <button type="submit">发送</button>
+    </form>
+  </main>
+</body>
+</html>
