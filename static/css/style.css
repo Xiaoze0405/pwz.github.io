@@ -1,0 +1,97 @@
+/* 字体 & 布局 */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body, html { height: 100%; font-family: 'Segoe UI', 'PingFang SC', sans-serif; }
+
+/* 背景图 */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url('../images/@r07qxo%20-%20R%E2%A4%93Download.jpeg') no-repeat center center/cover;
+  filter: brightness(0.55) blur(4px);
+  z-index: -2;
+}
+
+/* 半透明渐变层 */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.55));
+  z-index: -1;
+}
+
+/* 邮件表单卡片 */
+.card {
+  width: min(420px, 92%);
+  margin: 10vh auto;
+  padding: 32px 28px;
+  background: rgba(255,255,255,0.92);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  text-align: left;
+  backdrop-filter: blur(6px);
+}
+
+.card h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+label {
+  font-size: 14px;
+  color: #334155;
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  background-color: #fff;
+}
+
+input:focus, textarea:focus {
+  border-color: #0ea5e9;
+  box-shadow: 0 0 0 2px rgba(14,165,233,0.15);
+}
+
+button {
+  margin-top: 18px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #0ea5a1, #06b6d4);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 20px rgba(6,182,212,0.3);
+}
+
+/* 结果页按钮 */
+.back-btn {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 8px 16px;
+  background: #0ea5a1;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.card.small {
+  text-align: center;
+}
